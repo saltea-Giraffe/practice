@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お土産ページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-image: url('../images/jin-daiko.jpg');
+            background-size: cover;
+            background-position: center center; 
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        section {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .image-container {
+            flex: 1;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px; /* 画像の最大幅を設定 */
+            height: auto;
+            display: block;
+            margin-right: 20px; /* 画像とテキストの間隔を設定 */
+        }
+        .text-container {
+            flex: 2;
+        }
+        .text-container h2 {
+            color: #333;
+        }
+        .text-container p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            flex-shrink: 0; /* フッターがコンテンツを押し下げないようにする */
+        }
+        table{
+            margin:auto;
+        }
+        .button-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-button {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            background: none;
+            cursor: pointer;
+            max-width: 200px;
+        }
+        .image-button img {
+            max-width: 100%;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        .image-button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-button:hover img {
+            transform: scale(1.1);
+        }
+        .image-button:hover span {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>お土産ページ</h1>
+    </header>
+
+    <section>
+        <div class="image-container">
+            <img src="../images/donuts-stick.jpg" alt="ドーナツ棒画像">
+            <p>"今日のおやつ。沖縄産の黒糖を使ってるのにくまモン。 at Office http://miil.me/p/4xew4" by JaggyBoss is licensed under CC BY-SA 2.0.</p>
+        </div>
+        <div class="text-container">
+            <h2>黒糖ドーナツ棒</h2>
+            <p>熊本土産の中で一番強い商品です。</p>
+            <p>黒糖の味がするドーナツで、棒状になっているため、食べやすいです。</p>
+            
+            
+        </div>
+    </section>
+
+    <section>
+        <div class="image-container">
+            <img src="../images/jin-daiko.JPG" alt="陣太鼓画像">
+        </div>
+        <div class="text-container">
+            <h2>陣太鼓</h2>
+            <p>餡子と求肥の味が合わさって、餡子の団子のような味。
+                餡子が甘すぎず、あっさり食べられる。</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="image-container">
+            <img src="../images/menbe.jpg" alt="めんべい画像">
+            <p>"九州の明太せんべい" by Norisa1 is licensed under CC BY 2.0.</p>
+        </div>
+        <div class="text-container">
+            <h2>ごぼうめんべい</h2>
+            <p>菊池の水田にて作られたごぼうを使用しためんべいです。</p>
+            <p>普通の明太子の味がするめんべいとちがい、辛味も控えめで、ごぼうのうまみが
+                詰まったせんべいとなっています。</p>
+        </div>
+    </section>
+    
+    <table>
+        <tr>
+            <td>
+                <button class="image-button">
+                    <a href="../index.html">
+                        <img src="../images/jin-daiko.JPG" alt="jin-daiko">
+                        <span class="button-text">戻る</span>
+                    </a>
+                </button>
+            </td>
+        </tr>
+    </table>
+    
+
+    <footer>
+        <p>&copy; 2024 s2221197</p>
+    </footer>
+
+</body>
+</html>
