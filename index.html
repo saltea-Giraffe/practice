@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菊池市 PRページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-image: url('images/header-image.jpg');
+            background-size: cover;
+            background-position: center center; 
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+        .image-button {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            background: none;
+            cursor: pointer;
+            max-width: 300px;
+        }
+        .image-button img {
+            max-width: 100%;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        .image-button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-button:hover img {
+            transform: scale(1.1);
+        }
+        .image-button:hover span {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            flex-shrink: 0; /* フッターがコンテンツを押し下げないようにする */
+        }
+        table{
+            margin:auto;
+        }
+        .button-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-button:hover .button-text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>熊本県菊池市 PRページ</h1>
+    </header>
+
+    <section>
+        <h2 onclick="scrollToButton('welcome')">ようこそ、菊池市へ</h2>
+        <p>菊池市は自然に囲まれた美しい場所です。豊かな歴史と文化が息づく地域で、観光スポットや地元のイベントがあります。</p>
+        <p>是非、菊池市への訪問をお考えください。</p>
+    </section>
+
+    <section>
+        <h2 onclick="scrollToButton('welcome')">観光スポット</h2>
+        <p>菊池市には自然の中に広がる素晴らしい観光スポットがたくさんあります。山々や渓谷、歴史的な建造物などが訪れる人々を魅了しています。</p>
+        <!-- ここに観光スポットの詳細や画像を追加する -->
+    </section>
+
+    <section>
+        <h2 onclick="scrollToButton('welcome')">お土産</h2>
+        <p>菊池市では様々なお土産が存在します。水田ごぼうで作られたごぼうめんべいは非常においしいです。
+            また、ドーナツ棒と言って黒糖味のドーナツが人気です。
+            これ以外にも、お土産として有能な商品がたくさんあります。
+
+        </p>
+    </section>
+    <section>
+        <h2 onclick="scrollToButton('welcome')">剣道</h2>
+        <p>菊池市は剣道人口の多い熊本県でも一番剣士の多い市でもあります。そのため、熊本県の剣士たちは非常に強いです。
+
+        </p>
+    </section>
+    <section>
+        <h2 onclick="scrollToButton('welcome')">コッコファーム</h2>
+        <p>農場も多いため、新鮮な肉や卵や野菜が安価ですぐに手に入ります。農場と提携しているお店へ行けば、新鮮な卵で作られたおいしいソフトクリームが食べられます。
+
+        </p>
+    </section>
+    <section>
+        <h2 onclick="scrollToButton('welcome')">ラーメン</h2>
+        <p>そして外せないのが豚骨ラーメンです。熊本内ではチェーン展開している味千ラーメンはとてもおいしいです。
+
+        </p>
+    </section>
+    <section>
+        <p>以上の魅力を、下記のボタンをクリックした先のページで紹介したいと思います。</p>
+    </section>
+    <table>
+        <tr>
+            <td>
+                <button class="image-button" id="button-welcome">
+                    <a href="pages/ramen_page.html">
+                        <img src="images/ramen.jpg" alt="ramen-image">
+                        <span class="button-text">ラーメン</span>
+                    </a>
+                </button>
+                <button class="image-button" id="button-welcome">
+                    <a href="pages/kendo_page.html">
+                        <img src="images/kendo.jpg" alt="kendo-image">
+                        <span class="button-text">剣道</span>
+                    </a>
+                    
+                </button>
+                <button class="image-button" id="button-welcome">
+                    <a href="pages/omiyage_page.html">
+                        <img src="images/jin-daiko.JPG" alt="jin-daiko">
+                        <span class="button-text">お土産</span>
+                    </a>
+                </button>
+                <button class="image-button" id="button-welcome">
+                    <a href="pages/farm_page.html">
+                        <img src="images/farm.jpg" alt="farm-image">
+                        <span class="button-text">コッコファーム</span>
+                    </a>
+                </button>
+                <button class="image-button" id="button-welcome">
+                    <a href="pages/sushi_page.html">
+                        <img src="images/sushi.jpg" alt="sushi-image">
+                        <span class="button-text">海鮮</span>
+                    </a>
+                </button>
+                <button class="image-button" id="button-welcome">
+                    <a href="pages/library_page.html">
+                        <img src="images/library.jpg" alt="library-image">
+                        <span class="button-text">図書館</span>
+                    </a>
+                </button>
+            </td>
+        </tr>
+    </table>
+    
+
+    <footer>
+        <p>&copy; 2024 s2221197</p>
+    </footer>
+    <script>
+        function scrollToButton(sectionId) {
+            const buttonId = `button-${sectionId}`;
+            const button = document.getElementById(buttonId);
+            if (button) {
+                button.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
